@@ -1,0 +1,5 @@
+ (cond((null? list1) list2)
+        ((null? list2) list1)
+        ((null? list2))
+        ((inorder? (car list2) (car list1)) (cons (car list2) (merge inorder? (cdr list2) list1)))
+        (else(cons (car list1) (merge inorder? (cdr list1) list2)))))
